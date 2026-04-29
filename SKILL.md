@@ -262,13 +262,30 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 ### 14. Em Dash Overuse
 
-**Problem:** LLMs use em dashes (—) more than humans, mimicking "punchy" sales writing. In practice, most of these can be rewritten more cleanly with commas, periods, or parentheses.
+**Problem:** LLMs use em dashes (—) more than humans, mimicking "punchy" sales writing. Treat every em dash as a smell to investigate. Most can be replaced with a conjunction, a comma, or a period — the right fix depends on the relationship between the clauses.
+
+**Replacement guide:**
+- Contrast or contradiction → use ", but" or ", though"
+- Cause or reason → use "since", "because", or "which"
+- Aside or parenthetical → use commas or parentheses
+- Abrupt break or pivot → use a period and start a new sentence
 
 **Before:**
 > The term is primarily promoted by Dutch institutions—not by the people themselves. You don't say "Netherlands, Europe" as an address—yet this mislabeling continues—even in official documents.
 
 **After:**
 > The term is primarily promoted by Dutch institutions, not by the people themselves. You don't say "Netherlands, Europe" as an address, yet this mislabeling continues in official documents.
+
+**More examples:**
+
+| Em dash version | Better version |
+|---|---|
+| `it just wasn't being picked up — it had `[[0, 'desc']]` set` | `it had `[[0, 'desc']]` set, but it wasn't being picked up` |
+| `they use DataTables' native attribute — it works fine` | `they use DataTables' native attribute, which works fine` |
+| `it compiled — but missed the point` | `it compiled but missed the point` |
+| `the fix is simple — add the key to static values` | `the fix is simple: add the key to static values` (use a colon for "namely" relationships) |
+
+**Rule of thumb:** If you wrote an em dash, ask "what is the logical relationship here?" Then use the word that names that relationship (but, since, because, which, though). Do not keep the em dash.
 
 
 ### 15. Overuse of Boldface
@@ -550,10 +567,3 @@ Provide:
 - Removed filler phrases and persuasive framing ("In order to", "At its core")
 - Removed generic positive conclusion ("the future looks bright", "exciting times lie ahead")
 - Made the voice more personal and less "assembled" (varied rhythm, fewer placeholders)
-
-
-## Reference
-
-This skill is based on [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup. The patterns documented there come from observations of thousands of instances of AI-generated text on Wikipedia.
-
-Key insight from Wikipedia: "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."
